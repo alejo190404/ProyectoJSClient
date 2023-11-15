@@ -15,7 +15,8 @@ export default function Login(){
         }).then(res => res.json())
             .then(json=> {
                 localStorage.setItem('jwt', json.token);
-                Navigate('/users')
+                console.log(localStorage.getItem);
+                navigate('/chat')
             }).catch(e=>console.log(e))
     }
 
