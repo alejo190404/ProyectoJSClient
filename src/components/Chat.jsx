@@ -9,13 +9,6 @@ export default function Login(){
     
 
     return (<>
-        <div style = {{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center'
-            }}>
-            Este es el chat
-        </div>
+        <div>Este es el chat</div>
     </>)
 }
