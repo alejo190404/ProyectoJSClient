@@ -1,12 +1,18 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './App.css'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 
-function App() {
+
+
+function App({socket}) {
   const [count, setCount] = useState(0)
   const navigate = useNavigate();
+
+  useEffect(() => {
+    console.log(socket)
+  }, []);
 
   return (
     <>

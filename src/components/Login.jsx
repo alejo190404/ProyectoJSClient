@@ -14,9 +14,12 @@ export default function Login(){
             }
         }).then(res => res.json())
             .then(json=> {
+                if (json.err)
+                    throw json.err;
+                
                 localStorage.setItem('jwt', json.token);
                 console.log(localStorage.getItem);
-                navigate('/chat')
+                navigate('/nasa')
             }).catch(e=>console.log(e))
     }
 
